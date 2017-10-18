@@ -1,0 +1,11 @@
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>a
+Enter the first value: 3
+Enter the second value: -1
+Enter the third value: 15
+Median: 3
+
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>a
+Enter the first value: 99
+Enter the second value: 65
+Enter the third value: 22
+Median: 65

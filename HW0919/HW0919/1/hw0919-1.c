@@ -1,0 +1,34 @@
+/*   Devin Fowler
+   * E01151306
+   * 09/19/2017
+   * http://people.emich.edu/dfowle13/courses/Cosc341/HW0919.rar
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int size = 10;
+    int numChoices = 5;
+    int seed = 50;
+    srand(seed);
+
+    printf("Seed: ");
+    printf("%d\n", seed);
+
+    for (int x = 0; x < numChoices; x++) {
+
+
+        int r = rand() % (size - 1);
+
+        printf("Random number: ");
+        printf("%d\n", arr[r]);
+
+        arr[r] = arr[size - 1];
+        size--;
+
+    }
+
+}

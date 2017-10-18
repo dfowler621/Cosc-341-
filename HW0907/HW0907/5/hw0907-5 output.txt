@@ -1,0 +1,14 @@
+
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>gcc hw0907-5.c
+
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>a 3 5 7 8 8 8 2 100 1
+Input is:  3  5  7  8  8  8  2  100  1
+
+Number of even numbers: 5
+
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>a 5 88 9 3 4 6 7 20 21 25 26 28
+Input is:  5  88  9  3  4  6  7  20  21  25  26  28
+
+Number of even numbers: 6
+
+C:\Users\dfowl\Desktop\COSC 341\C\hw0907>
