@@ -1,0 +1,61 @@
+Devin Fowler
+E01151306
+people.emich.edu/dfowle13/cosc341/hw1024
+
+				
+				HMWK 1024
+
+3.1
+	A. The number of built in functions is bound at language design time.
+	B. The variable decleration is bound at compile time.
+	C. The max length allowed for a constant is bound at language implementation time. 
+	D. The referencing environment for a subroutine is bound at the same time as the referencing environment.
+	E. The address of a particular library routine is bound by the linker.
+	F. The total amount of space occupied is bound at run time.
+
+3.5
+	A. The program prints: 
+		 1  1
+		 3  1
+		 1  2
+	B. The program prints:
+		 1  2
+		
+3.6
+	A. 9 4 2 1 4
+	
+	B.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.7
+	A. Brad has a memory leak because the reverese_list routine produces a new list, made up of
+	   new list nodes. The program never reclaims the old list nodes.
+	
+	B. The delete_list function reclaims the old list nodes, but it also reclaims the widgets,
+	   which leaved the new reversed list to conatain references thad should not be there, 
+	   and could lead to corrupted data.
+   
+
+3.14
+	With static scoping, the program prints: 1 1 2 2. With dynamic scoping, the program
+	prints: 1 1 2 1. There is a difference in whether the set_x function sees the global x
+        or the x declared in the second procedure.
+	   
+	   
+	
