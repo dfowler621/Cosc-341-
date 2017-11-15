@@ -1,0 +1,105 @@
+/*	Devin Fowler	
+ * 	COSC 341 
+ * 	Susan Haynes
+ * 	Poject 1
+ * 	E01151306
+ */
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Project1 {
+
+	public static String[][] symbolTable = new String[20][5];
+
+	public static void main(String[] args) throws FileNotFoundException {
+
+		int nestingLevel = 0;
+		int arrayLine = 0;
+		int arrayRow = 0;
+		// file input stuff
+		String fileName;
+		Scanner keyboardScanner = new Scanner(System.in);
+		System.out.print("Enter File Name: ");
+
+		fileName = keyboardScanner.nextLine();
+		fileName = fileName + ".txt";// appends .txt to end of entered file name
+		System.out.println("NAME TYPE LEVEL L#");
+		System.out.println("------------------------------");
+
+		File textFile = new File(fileName);
+		Scanner fileScanner = new Scanner(textFile);
+
+		int lineNumber = 1;
+		while (fileScanner.hasNextLine()) {// while loop to continue until no more lines in file
+
+			String line = fileScanner.nextLine();
+			String[] words = line.split("\\s+"); // split line into individual words and place into temporary array
+
+			// for loop and if statements to pull type and name and put it into array
+			for (int x = 0; x < words.length; x++) {
+				if (words[x].equals("int")) {
+					symbolTable[arrayLine][arrayRow] = words[(x + 1)];
+					symbolTable[arrayLine][arrayRow + 1] = words[x];
+					symbolTable[arrayLine][2] = Integer.toString(nestingLevel);
+				} else if (words[x].equals("proc")) {
+					symbolTable[arrayLine][arrayRow] = words[(x + 1)];
+					symbolTable[arrayLine][arrayRow + 1] = words[x];
+					symbolTable[arrayLine][2] = Integer.toString(nestingLevel);
+				} else if (words[x].equals("real")) {
+					symbolTable[arrayLine][arrayRow] = words[(x + 1)];
+					symbolTable[arrayLine][arrayRow + 1] = words[x];
+					symbolTable[arrayLine][2] = Integer.toString(nestingLevel);
+				}
+
+				// If statements to search for brackets in order to increment and decrement the
+				// nesting level
+				if (words[x].equals("{")) {
+					nestingLevel++;
+				} else if (words[x].equals("}")) {
+					nestingLevel = nestingLevel - 1;
+				}
+
+			}
+
+			symbolTable[arrayLine][3] = Integer.toString(lineNumber);// places line number into symbol table
+			symbolTable[arrayLine][3] = (symbolTable[arrayLine][3] + "#");
+
+			lineNumber++;// increment line number
+			arrayLine++;
+
+		}
+
+		// Loop to remove semicolon from symbol table
+		for (int i = 0; i < symbolTable.length; i++) {
+			for (int j = 0; j < symbolTable[i].length; j++) {
+				if (symbolTable[i][j] != null && symbolTable[i][j].contains(";")) {
+					symbolTable[i][j] = symbolTable[i][j].replace(";", "");
+
+				}
+			}
+		}
+
+		keyboardScanner.close();
+		fileScanner.close();
+		printTable(); // call to print table method
+
+	}
+
+	// method to loop through and print table
+	public static void printTable() {
+		for (int i = 0; i < symbolTable.length; i++) {
+			for (int j = 0; j < symbolTable[i].length; j++) {
+				if (symbolTable[i][j] != null && symbolTable[i][0] != null) {
+					System.out.print((symbolTable[i][j]) + " ");
+				}
+			}
+			if (symbolTable[i][0] != null) {
+				System.out.println();
+			}
+
+		}
+
+	}
+
+}
