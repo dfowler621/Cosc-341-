@@ -3,7 +3,7 @@
  * 	Susan Haynes
  * 	Project 1
  * 	E01151306
- *	people.emich.edu/dfowle13/courses/cosc341/project1
+ *	people.emich.edu/dfowle13/courses/cosc341
  *	https://github.com/dfowler621/Cosc_341/tree/master/Project%201
  */
 
