@@ -20,14 +20,13 @@ proc f1 {
 
 
 ---------------Output---------------
-
 Enter File Name: sourcefile2
-NAME TYPE LEVEL L#
+NAME	TYPE	LEVEL	L#
 ------------------------------
-f1 proc 0 1# 
-x int 1 2# 
-y int 2 4# 
-z int 3 6# 
-f2 proc 1 11# 
-y real 2 12# 
-z real 1 15# 
+f1	proc	0	1#	
+x	int	1	2#	
+y	int	2	4#	
+z	int	3	6#	
+f2	proc	1	11#	
+y	real	2	12#	
+z	real	1	15#	

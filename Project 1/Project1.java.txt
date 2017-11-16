@@ -1,7 +1,7 @@
 /*	Devin Fowler	
  * 	COSC 341 
  * 	Susan Haynes
- * 	Poject 1
+ * 	Project 1
  * 	E01151306
  */
 
@@ -24,17 +24,19 @@ public class Project1 {
 
 		fileName = keyboardScanner.nextLine();
 		fileName = fileName + ".txt";// appends .txt to end of entered file name
-		System.out.println("NAME TYPE LEVEL L#");
+		System.out.println("NAME\tTYPE\tLEVEL\tL#");
 		System.out.println("------------------------------");
 
 		File textFile = new File(fileName);
 		Scanner fileScanner = new Scanner(textFile);
 
 		int lineNumber = 1;
-		while (fileScanner.hasNextLine()) {// while loop to continue until no more lines in file
+		// while loop to continue until no more lines in file
+		while (fileScanner.hasNextLine()) {
 
 			String line = fileScanner.nextLine();
-			String[] words = line.split("\\s+"); // split line into individual words and place into temporary array
+			// split line into individual words and place into temporary array
+			String[] words = line.split("\\s+"); 
 
 			// for loop and if statements to pull type and name and put it into array
 			for (int x = 0; x < words.length; x++) {
@@ -52,7 +54,7 @@ public class Project1 {
 					symbolTable[arrayLine][2] = Integer.toString(nestingLevel);
 				}
 
-				// If statements to search for brackets in order to increment and decrement the
+		// If statements to search for brackets in order to increment and decrement the
 				// nesting level
 				if (words[x].equals("{")) {
 					nestingLevel++;
@@ -62,7 +64,8 @@ public class Project1 {
 
 			}
 
-			symbolTable[arrayLine][3] = Integer.toString(lineNumber);// places line number into symbol table
+			// places line number into symbol table
+			symbolTable[arrayLine][3] = Integer.toString(lineNumber);
 			symbolTable[arrayLine][3] = (symbolTable[arrayLine][3] + "#");
 
 			lineNumber++;// increment line number
@@ -91,7 +94,7 @@ public class Project1 {
 		for (int i = 0; i < symbolTable.length; i++) {
 			for (int j = 0; j < symbolTable[i].length; j++) {
 				if (symbolTable[i][j] != null && symbolTable[i][0] != null) {
-					System.out.print((symbolTable[i][j]) + " ");
+					System.out.print((symbolTable[i][j]) + "/t");
 				}
 			}
 			if (symbolTable[i][0] != null) {

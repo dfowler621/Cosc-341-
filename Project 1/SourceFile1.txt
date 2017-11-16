@@ -12,12 +12,11 @@ proc g {
 
 
 ---------------Output---------------
-
 Enter File Name: sourcefile1
-NAME TYPE LEVEL L#
+NAME	TYPE	LEVEL	L#
 ------------------------------
-g proc 0 1# 
-x int 1 2# 
-y int 1 3# 
-x real 2 5# 
-z real 2 6# 
+g	proc	0	1#	
+x	int	1	2#	
+y	int	1	3#	
+x	real	2	5#	
+z	real	2	6#	
