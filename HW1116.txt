@@ -1,0 +1,15 @@
+Devin Fowler
+COSC 341
+HMWK 1116
+http://people.emich.edu/dfowle13/courses/Cosc341/HW1116.txt
+
+1. 240 bytes of space will be consumed.
+
+2. A[5] has an offset of 4.
+
+3. The offset is 16
+
+4. 480 bytes
+
+5. The offset is 9
+ 
