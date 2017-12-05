@@ -1,0 +1,17 @@
+Devin Fowler	
+12/04/2017
+E01151306
+http://people.emich.edu/dfowle13/courses/Cosc341/HW1130.txt
+
+					HW1130
+
+#3.18
+	-With shallow binding, the program prints: 1 0  2 0  3 0  4 0
+	-With deep binding, the program prints: 1 0  5 2  0 0  4 4
+
+#3.19
+	A.) Using static scoping, the program prints: 3
+	B.) With dynamic scoping with deep binding, the program prints: 4
+	C.) With dynamic scoping with shallow binding, the program prints: 1
+
+
